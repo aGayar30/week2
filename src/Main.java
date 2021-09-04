@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -5,16 +6,16 @@ public class Main {
     public static void main (String[] args){
 
         Scanner scanner = new Scanner(System.in);
-        double[] nums = new double[12];
+        ArrayList<Double> nums = new ArrayList<>();
         double sum=0;
-        for (int i=0; i<12; i++){
-            nums[i] = scanner.nextDouble();
+        for (int i=0; i<10; i++){
+            nums.add(scanner.nextDouble());
         }
 
-        for (double element : nums){
+        for (Double element : nums){
             sum += element;
         }
-        System.out.println("average = " + sum/nums.length);
+        System.out.println("a verage = " + sum/nums.size());
     }
 
 }
